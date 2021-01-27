@@ -1,0 +1,134 @@
+$container:1200px;
+$spacer-lg:1em;
+$white:#fff;
+$white-transparent:rgba(255,255,255,0.5);
+$dark:#444;
+$blue: rgb(10, 10, 173);
+$yellow:#fab702;
+
+body {
+    font-family: 'News Cycle', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.page {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('images/img4.jpg');
+    background-size: cover;
+}
+.page- {
+    &header,
+    &content,
+    &footer {
+        width: $container;
+        margin: $spacer-lg auto;
+        background-color:$white-transparent;
+    }
+    &header ul {
+        justify-content: flex-end;
+        align-items: center;
+        a{
+            padding: $spacer-lg;
+            color:$dark;
+            font-weight: 600;   
+        }
+        .brand {
+            position: relative;
+            right: $spacer-lg*24;
+            font-size: $spacer-lg*1.5;
+            font-weight: 600;
+        }
+        .search-icon {
+                a {
+                color: $blue;
+            }
+            
+        }
+    }
+    &content{
+        h1,h2 {
+            line-height: $spacer-lg*1.5;
+            text-align: center;
+            color: $dark;
+        }
+        h1 {
+            font-size:$spacer-lg*2;
+            font-weight: 800;
+        }
+        h2{
+            font-size:$spacer-lg*1.5; 
+            font-weight: 600;
+        }
+        p{
+            line-height: $spacer-lg*1.5;
+            font-size:$spacer-lg;
+            text-align: center;
+        }
+        main{
+            width: 66%;
+        }
+        form{
+            width: 33%;
+            input {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        .data {
+            padding: $spacer-lg 0 $spacer-lg 0;
+            legend {
+                color: $dark;
+                font-weight: 600;
+            }
+            label {
+                padding: $spacer-lg/3;
+            }
+       }
+       .subscrib  {
+            label {
+                padding: 0 0 $spacer-lg/2 $spacer-lg*2;
+            }
+            .checkbox{
+                position: relative;
+                top: $spacer-lg*1.4;
+                right: $spacer-lg*15;
+            }
+            button {
+                background-color: $yellow;
+                width: $spacer-lg*20;
+                padding: $spacer-lg/2;
+                margin-left: $spacer-lg*0.5;
+            }   
+        } 
+    }
+    &footer {
+        justify-content: center;
+        align-items: center;
+        .contact-icon {
+            padding: 0 0 $spacer-lg 0;
+            a {
+                color: $blue;
+                padding: $spacer-lg;
+            }
+        }
+    }
+}
+.dflex {
+    display: flex;
+}
+.fcol {
+    flex-direction: column;
+}
+.dgrid {
+    display: grid;
+    gap: $spacer-lg*5;
+    align-items: center;
+}
+.p1{
+    padding: $spacer-lg;
+}
+.mr2{
+    margin-right: $spacer-lg*2;
+}
